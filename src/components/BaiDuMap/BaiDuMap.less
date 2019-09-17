@@ -1,0 +1,96 @@
+.map-pop-container {
+    height: 100%;
+    width: 100%;
+    font-size: .2rem;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .pop-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: .24rem;
+  
+      .header-title {
+        display: inline-block;
+        height: .2rem;
+        line-height: .11rem;
+        padding: .05rem;
+        font-size: .26rem; 
+        border-left: .03rem solid @color-default;
+      }
+    }
+  
+    .baidumap-container {
+      height: 5rem;
+      width: 100%;
+      position: relative;
+  
+      #baidumap-container {
+        height: 100%;
+        width: 100%;
+      }
+  
+      #r-result{
+        display: none;
+      }
+  
+      .search-container {
+          .search-container(.4rem, 3.3rem, .16rem);
+      }
+  
+      #search-key {
+        display: none;
+        position: absolute;
+        top: @position-top;
+        left: @position-left;
+      }
+  
+      .map-search-container {
+        position: absolute;
+        top: .65rem;
+        left: @position-left;
+        background: #FFF;
+        width: 3.28rem;
+        z-index: 1;
+        .box-shadow;
+        font-size: .16rem;
+        padding: .1rem;
+        height: 3rem;
+        overflow-y: auto;
+  
+        .map-search-item {
+          height: .4rem;
+          line-height: .4rem;
+          cursor: pointer;
+          .ellipsis;
+  
+          &:hover {
+            color: @color-default;
+            background: #E7EEFF;
+          }
+        }
+      }
+  
+      .anchorBL {
+        display:none;
+      }
+    }
+    .baidumap-confirm {
+      position: absolute;
+      top: .8rem;
+      right: .4rem;
+      width: 1.2rem;
+      height: .4rem;
+      background: @color-default;
+      border: none;
+      color: #FFF;
+      font-size: .2rem;
+      cursor: pointer;
+      
+      &:hover {
+        background: #7AA1FF;
+      }
+    }
+  } 

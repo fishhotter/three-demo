@@ -1,0 +1,49 @@
+
+.home-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .ant-layout-content {
+        height: 100%;
+    }
+    .ant-layout-sider{
+      border-right: 1px solid #e8e8e8;
+      .ant-layout-sider-trigger{
+        border-right: 1px solid #e8e8e8;
+        .trigger-box{
+          font-size: .18rem;
+          display: flex;
+          padding: 0 .23rem;
+          .text-box{
+            margin-left: .13rem;
+          }
+          .icon-box {          
+            transform: rotate(180deg);
+            transition: all .3s;
+          }
+        }
+        .active {
+          font-size: .2rem;
+          .text-box{
+            display: none;
+          }
+  
+          .icon-box{
+            transform: rotate(0deg)
+          }
+         
+        }
+      }
+    }
+  
+    .home-children {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+    }
+  }
+  .ant-modal{
+    left: -10%;
+    width: 5.2rem !important;
+  } 

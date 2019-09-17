@@ -1,0 +1,101 @@
+.Menu-component-container {
+    
+    .menu-link {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding-left: 30px;
+        
+        &:hover {
+            .link-box {
+                color: #1890ff
+            }
+        }
+    }
+
+    .ant-menu {
+        user-select: none;
+        .anticon {
+            font-size: .18rem;
+            transition: all .3s;
+        }
+        .link-box {
+            font-size: .18rem;
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .ant-menu-item-selected {
+            .link-box {
+                color: #1890ff
+            }
+        }
+        .ant-menu-submenu {
+            .ant-menu-submenu-title {
+                padding-left:.10rem !important;
+                padding-right: .1rem !important;
+                .anticon {
+                    font-size: .18rem;
+                    transform: all .3s;
+                }
+                .title {
+                    font-size: .18rem;
+                }
+            }
+            .ant-menu {
+                .ant-menu-item{
+                    padding-left:.4rem !important;
+                    padding-right: 0 !important;
+                    position: relative;
+                    &:hover {
+                        .link-box {
+                            color: #1890ff
+                        }
+                    }
+                    .link-box{
+                        font-size: .16rem;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .ant-menu-submenu-arrow{
+                right: .08rem
+            }
+        }
+        .ant-menu-item{
+            padding-left:.10rem !important;
+        }
+    }
+    .ant-menu-inline{
+        border: none;
+    }
+    .ant-menu-inline-collapsed {
+        width: auto;
+        border:none;
+        .ant-menu-item{
+            padding: 0 !important;
+            display: flex;
+            justify-content: center;
+            .anticon{
+                font-size: .2rem;
+            }
+        }
+        .ant-menu-submenu{
+            display: flex;
+            justify-content: center;
+            .ant-menu-submenu-title {
+                padding: 0 !important;
+                display: flex;
+                justify-content: center;
+                .anticon{
+                    font-size: .2rem;
+                }
+            }
+         
+        }
+    }
+}
+.ant-menu-submenu{
+    left: .88rem !important; 
+}

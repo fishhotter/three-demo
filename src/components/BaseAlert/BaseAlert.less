@@ -1,0 +1,39 @@
+.BaseAlert{
+    position: fixed;
+      left: 50%;
+      top: 9.4rem;
+      z-index: 999;
+      transform: translateX(-50%);
+      background-color: #1c3d5e;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      box-sizing: border-box;
+      border-radius: .02rem;
+    .type{
+      width: .7rem;
+      height: .7rem;
+    }
+    .content{
+      font-size: .48rem;
+      color: #fff;
+      height: .7rem;
+      line-height: .7rem;
+      padding-right: 1rem;
+      padding-left: .5rem;
+    }
+    .success{
+      background:url("../../assets/image/common/success.png") no-repeat center center;
+      background-size: contain;
+  
+    }
+    .error{
+      background:url("../../assets/image/common/error.png") no-repeat center center;
+      background-size: contain;
+    }
+    .warning{
+      background:url("../../assets/image/common/warning.png") no-repeat center center;
+      background-size: contain;
+    }
+  } 

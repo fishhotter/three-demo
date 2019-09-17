@@ -1,0 +1,141 @@
+@component-title: #00a3ff;
+@input-background: #0562A5;
+@color-uncheck: #FFFFFF;
+@color-checked: #00FFFF;
+@color-hover: #CCC;
+@color-forbid: #CCC;
+@color-btn-hover: #5F8FFF;
+@color-header-line: rgba(0, 173, 235, .5);
+
+@color-background: #010E36; //页面底色
+@color-default: #427AFF;  //主色、高亮色（文字等）
+@color-highlight: #00CFFF; //用于需要特别突出的数字和文本
+@color-highlight-dark: #0257B8;  //用于需要特别突出的数字和文本
+@color-highlight-yellow: #F8E71C;  //用于需要特别突出的数字和文本
+@color-data-warning: #FF9900;  //用于警示
+@color-data-up: #FF2100;  //用于数据上升和警示
+@color-data-down: #B4FF00; //用于数据下降
+@color-font: #CCCCCC; //字体颜色
+
+@color-normal: #00C800;
+@color-warning: #FFCC00;
+@color-alert: #E82821;
+@color-offline: #D8D2D2;
+
+@position-left: .2rem;
+@position-right: .4rem;
+@position-bottom: .4rem;
+@position-top: .2rem;
+@container-background: rgba(255, 255, 255, .9);
+
+.center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.box-shadow {
+    box-shadow: .02rem .02rem .05rem 0 rgba(0,0,0,0.10);
+    border-radius: .01rem;
+}
+
+
+.search-container(@height, @width, @fontSize) {
+  position: absolute;
+  top: @position-top;
+  left: @position-left;
+  height: @height;
+  width: @width;
+  .box-shadow;
+  z-index: 1;
+
+  .ant-input-search {
+
+    .ant-input-wrapper {
+
+      .ant-input {
+        border-radius: 0;
+        height: @height;
+        font-size: @fontSize;
+        border: none;
+        box-shadow: none;
+
+        &:hover, &:focus {
+          border: none;
+        }
+      }
+
+      .ant-input-group-addon {
+
+        .ant-btn {
+          height: @height;
+          border-radius: 0;
+
+          .anticon-search {
+              font-size: .3rem;
+              padding-top: .03rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.detail-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.ant-message {
+  top: 2rem;
+}
+
+.ant-input-suffix {
+  color: #CCC !important;
+}
+
+.spin-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, .3);
+  z-index: 200;
+  top: 0;
+  left: 0;
+
+  .ant-spin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .ant-spin-dot {
+      height: .6rem;
+      width: .6rem;
+
+      i {
+        height: .3rem;
+        width: .3rem;
+      }
+    }
+  }
+}

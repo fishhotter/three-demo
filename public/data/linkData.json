@@ -1,0 +1,6 @@
+{
+    "MAP_SOURCE": {
+      "baseMapLayer": "http://30.99.137.128:6080/arcgis/rest/services/PC_Water_BaseMap/MapServer",
+      "watershedLayer": "http://30.99.137.128:6080/arcgis/rest/services/PC_Water_HCST_BaseMap/MapServer"
+    }
+  }

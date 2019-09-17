@@ -1,0 +1,65 @@
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+
+    .verify-container {
+        height: .6rem;
+        display: flex;
+        align-items: center;
+        width: 4.2rem;
+
+        .verify-class {
+            width: 65%;
+        }
+
+        img {
+            cursor: pointer;
+            width: 35%;
+            width: 1.6rem;
+            height: .6rem;
+            border: .01rem solid #427AFF;
+            overflow: hidden;
+        }
+
+    }
+
+    .form-checkbox-block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: .1rem;
+        padding-left: .01rem;
+
+        .forget-password {
+            font-size: .16rem;
+            cursor: pointer;
+
+            &:hover {
+                color: @color-hover;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .submit-btn {
+        background: #427AFF;
+        border-radius: .01rem;
+        height: .5rem;
+        margin-top: .3rem;
+        font-size: .24rem;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: @color-btn-hover;
+        }
+    }
+
+    .err-tips {
+        width: 4.2rem;
+        color: #E82821;
+        font-size: .16rem;
+        margin-top: .1rem;
+        .ellipsis;
+    }
+}

@@ -12,7 +12,11 @@ let width:number;
 let height:number;
 let stats:any;
 let mesh:any;
-
+let params:any;
+let map:any;
+let material:any;
+let geometry:any;
+import * as dat from 'dat.gui';
 function Texture(props:any){
 
     useEffect(()=>{
@@ -60,10 +64,42 @@ function Texture(props:any){
         
     }
 
+    
+
+    function initGui(){
+        
+        params = {
+            repeat:1,
+            wrap:1000
+        } 
+        const gui = new dat.GUI();
+        gui.add(params,"repeat",1,5).name("纹理重复");
+        gui.add(params,"wrap",1000,1002).name("纹理环绕").step(1);
+        
+
+    }
+
+    function change() {
+        if(map){
+
+            map.repeat.x = map.repeat.y = params.repeat;
+            map.wrapS = map.wrapT = params.wrap // THREE.RepeatWrapping;// (ClampToEdgeWrapping 1000) MirroredRepeatWrapping 1002
+
+            map.needsUpdate = true;
+        }
+
+    }
+
     function initObject() {
-        const map = THREE.ImageUtils.loadTexture(login);
-        const material = new THREE.MeshPhongMaterial({map});
-        const geometry = new THREE.PlaneGeometry( 100, 100, 1 );
+        // if(mesh){
+        //     scene.remove( mesh );
+        // }
+        map = new THREE.TextureLoader().load(login);
+
+        geometry = new THREE.PlaneGeometry( 100, 100, 1 );
+
+        
+        material = new THREE.MeshPhongMaterial({map});
         mesh = new THREE.Mesh( geometry,material );
         // mesh.rotation.x = Math.PI / 5;
         // mesh.rotation.y = Math.PI / 5;
@@ -83,6 +119,7 @@ function Texture(props:any){
         initCamera();
         initScene();
         initLight();
+        initGui();
         initObject();
         animation();
     }
@@ -91,6 +128,8 @@ function Texture(props:any){
     {
         // renderer.clear();
         // camera.position.x =camera.position.x +1;
+        // initObject();
+        change();
         renderer.render(scene, camera);
         requestAnimationFrame(animation);
         stats.update();

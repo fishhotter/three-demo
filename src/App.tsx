@@ -10,6 +10,7 @@ import "./assets/css/App.less";
 import Video from 'pages/Video/Video';
 import LightSpot from 'pages/LightSpot/LightSpot';
 import Texture from 'pages/Texture/Texture';
+import ThreeAngle from 'pages/ThreeAngle/ThreeAngle';
 
 // const Login = lazy(async () => import("./pages/Login/Login"));
 const DrawThree = lazy(async () => import("./pages/DrawThree/DrawThree"));
@@ -65,6 +66,7 @@ function App(props: IAppProps): JSX.Element {
         <Route path="/video" exact={true} component={withLazyLoad(Video)} />
         <Route path="/lightspot" exact={true} component={withLazyLoad(LightSpot)} />
         <Route path="/texture" exact={true} component={withLazyLoad(Texture)} />
+        <Route path="/threeAngle" exact={true} component={withLazyLoad(ThreeAngle)} />
         <SubRoute />
       </Switch>
     </BrowserRouter>

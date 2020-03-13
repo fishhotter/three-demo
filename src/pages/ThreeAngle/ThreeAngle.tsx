@@ -91,7 +91,7 @@ function ThreeAngle(props:any){
         // }
         // map = new THREE.TextureLoader().load(login);
 
-        geometry = new THREE.PlaneGeometry( 300, 300,2,3 );
+        // geometry = new THREE.PlaneGeometry( 300, 300,2,3 );
 
         material = new THREE.MeshBasicMaterial({
             wireframe:false,
@@ -101,13 +101,26 @@ function ThreeAngle(props:any){
         const color1 = new THREE.Color(0x00F000);
         const color2 = new THREE.Color(0x0000F0);
         const color3 = new THREE.Color(0xF0F000);
-        geometry.faces.map((item:any)=>{
-            item.vertexColors[0] = color1;
-            item.vertexColors[1] = color2;
-            item.vertexColors[2] = color3;
-        })
-        console.log(geometry);
+        // geometry.faces.map((item:any)=>{
+        //     item.vertexColors[0] = color1;
+        //     item.vertexColors[1] = color2;
+        //     item.vertexColors[2] = color3;
+        // })
+
+        geometry = new THREE.Geometry();
         
+        const vertor1 = new THREE.Vector3(100,0,0);
+        const vertor2 = new THREE.Vector3(0,100,0);
+        const vertor3 = new THREE.Vector3(-100,0,0);
+        geometry.vertices.push(vertor1);
+        geometry.vertices.push(vertor2);
+        geometry.vertices.push(vertor3);
+
+        const face = new THREE.Face3(0,1,2);
+        face.vertexColors[0] = color1;
+        face.vertexColors[1] = color2;
+        face.vertexColors[2] = color3;
+        geometry.faces.push(face);
 
         mesh = new THREE.Mesh( geometry,material );
         // mesh.rotation.x = Math.PI / 5;
